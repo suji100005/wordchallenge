@@ -92,7 +92,6 @@ function submitQuiz() {
 
   alert(`시험 완료! 점수: ${score} / 30`);
 
-  exportToExcel(record);
 }
 
 function exportToExcel(record) {
