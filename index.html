@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>🌱 WordGarden 단어시험</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <h1>🌱 WordGarden</h1>
+
+    <div id="name-selection">
+      <input type="text" id="nameInput" placeholder="이름을 입력하세요" />
+      <button onclick="findStudent()">시작</button>
+      <div id="nameResults"></div>
+    </div>
+
+    <div id="setSelection" style="display:none;">
+      <p>시험 세트를 선택하세요:</p>
+      <button onclick="selectSet(1)">1회차</button>
+      <button onclick="selectSet(2)">2회차</button>
+      <button onclick="selectSet(3)">3회차</button>
+      <button onclick="selectSet(4)">4회차</button>
+    </div>
+
+    <div id="passwordPrompt" style="display:none;">
+      <p>이 세트를 다시 보려면 비밀번호를 입력하세요:</p>
+      <input type="password" id="passwordInput" />
+      <button onclick="checkPassword()">확인</button>
+    </div>
+
+    <div id="quiz" style="display: none;">
+      <h2 id="quizTitle"></h2>
+      <form id="quizForm"></form>
+      <button onclick="submitQuiz()" type="button">제출하기</button>
+      <div id="result"></div>
+    </div>
+  </div>
+
+  <script src="student_data.js"></script>
+  <script src="word_list.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
